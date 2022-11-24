@@ -1,3 +1,2 @@
-function lockedProfile() {
-    console.log('TODO...')
+async function lockedProfile() {
 }
