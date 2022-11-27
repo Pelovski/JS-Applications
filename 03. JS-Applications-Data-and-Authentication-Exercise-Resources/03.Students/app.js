@@ -5,6 +5,8 @@ async function solve() {
 
     const response = await fetch(url);
     const data = await response.json();
+
+    console.log(submitBtn);
      
     tableElement.innerHTML = '';
     Object.values(data).forEach(x => {
