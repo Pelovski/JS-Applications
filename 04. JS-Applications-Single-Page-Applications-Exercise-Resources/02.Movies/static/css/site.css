@@ -1,3 +1,7 @@
+.view-section{
+    display: none;
+}
+
 
 .card {
     min-width: 18rem;
@@ -39,3 +43,4 @@
     text-decoration: underline;
     box-shadow: 0 5px 10px #cccccc;
 }
+
