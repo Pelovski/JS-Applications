@@ -1,5 +1,5 @@
 import { homePage } from "./home.js";
-import { loginPage } from "./login.js"
+import { loginPage, updateNav } from "./login.js"
 import { registerPage } from "./register.js";
 import { createPage } from "./create.js";
 import { detailsPage } from "./details.js";
@@ -33,8 +33,10 @@ function onNavigate(e) {
 
 
 function logoutPage() {
-    alert('Logged out');
+    localStorage.removeItem('user');
+    updateNav();
 }
 
 // Start App in catalog view
+updateNav();
 homePage()

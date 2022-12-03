@@ -5,13 +5,15 @@ import { showView } from "./util.js";
 const section = document.querySelector('#home-page');
 const catalog = section.querySelector('#movie .card-deck.d-flex.justify-content-center');
 
+
 export function homePage(){
     showView(section);
+    displayMovies();
 }
 
 async function displayMovies(){
     const movies =  await getMovies();
-    catalog.replaceChildren(movies.map(createMoviePreview));
+    catalog.replaceChildren(...movies.map(createMoviePreview));
 }
 
 function createMoviePreview (movie){
@@ -38,4 +40,3 @@ async function getMovies(){
     return data;
 }
 
-window.getMovies = getMovies;
