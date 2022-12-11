@@ -22,9 +22,10 @@ async function takeItems(){
     render(itemsTemplate(items),optinalElement);
 }
 
-async function addItem(e) {
+async function addItem(e) { 
     e.preventDefault();
 
+   if(itemInputText.value !== ''){
     const res = await fetch(baseUrl, {
         method: 'POST',
     headers: {
@@ -34,4 +35,6 @@ async function addItem(e) {
     });
     itemInputText.value = '';
     takeItems();
+   }
+    
 }
