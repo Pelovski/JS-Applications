@@ -1,6 +1,10 @@
 import page from '../node_modules/page/page.mjs';
 
+import { AddSession } from './middlewares/session.js';
 import { addRender } from './middlewares/render.js';
+
+import { logout } from './api/user.js';
+
 import { homePage } from './views/home.js';
 import { catalogPage } from './views/catalog.js';
 import { loginPage } from './views/login.js';
@@ -8,8 +12,11 @@ import { registerPage } from './views/register.js';
 import { createPage } from './views/create.js';
 import { detailsPage } from './views/details.js';
 import { editPage } from './views/edit.js';
-import { logout } from './api/user.js';
 
+import * as api from './api/games.js';
+window.api = api;
+
+page(AddSession);
 page(addRender);
 
 page('/', homePage);
@@ -24,7 +31,7 @@ page('/logout', onLogout)
 
 page.start();
 
-function onLogout(ctx){
+function onLogout(ctx) {
     logout();
     ctx.page.redirect('/');
 }

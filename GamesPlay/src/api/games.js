@@ -1,15 +1,35 @@
 import * as api from './api.js';
 
-const endpoint = {
+const endpoints = {
     recent: '/data/games?sortBy=_createdOn%20desc&distinct=category',
-    catalog: '/data/games?sortBy=_createdOn%20desc'
+    catalog: '/data/games?sortBy=_createdOn%20desc',
+    create: '/data/games',
+    byId: '/data/games/',
+    deleteById:'/data/games/',
+    update:'/data/games/'
 };
 
 export async function getRecent(){
 
-    return api.get(endpoint.recent);
+    return api.get(endpoints.recent);
 }
 
 export async function getAll(){
-    return api.get(endpoint.catalog);
+    return api.get(endpoints.catalog);
+}
+
+export async function getById(id){
+    return api.get(endpoints.byId + id);
+}
+
+export async function create(data){
+    return api.post(endpoints.create, data);
+}
+
+export async function update(id, data){
+    return api.put(endpoints.update + id, data)
+}
+
+export async function deleteById(id){
+    return api.delete(endpoints.deleteById + id);
 }
