@@ -6,9 +6,10 @@ import { showDetails } from './views/details.js';
 import { showCreate } from './views/create.js';
 import { initialize } from './router.js';
 import { logout } from './api/users.js';
-
+debugger;
 
 const links = {
+ 
     '/': showHome,
     '/catalog': showCatalog,
     '/login': showLogin,
