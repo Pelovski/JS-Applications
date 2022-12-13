@@ -22,7 +22,7 @@ export async function create(data){
 }
 
 export async function update(id, data){
-    return api.put(endpoints.update + id, data)
+    return api.put(endpoints.update + id, data);
 }
 
 export async function deleteById(id){

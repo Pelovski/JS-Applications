@@ -1,6 +1,6 @@
 import { html } from '../../node_modules/lit-html/lit-html.js';
-import { createSubmitHandler } from '../Api/utils.js';
-import * as comseticsService from '../Api/cosmetics.js'
+import { createSubmitHandler } from '../api/utils.js';
+import * as comseticsService from '../api/cosmetics.js';
 
 
 const editTemplate = (cosmetic, onSubmit) => html`

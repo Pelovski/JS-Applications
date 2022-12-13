@@ -1,5 +1,5 @@
 import { html, nothing } from '../../node_modules/lit-html/lit-html.js';
-import * as cosmeticsService from '../Api/cosmetics.js'
+import * as cosmeticsService from '../api/cosmetics.js';
 
 
 const detailsTemplate = (cosmetic, user, onDelete, onClick) => html`

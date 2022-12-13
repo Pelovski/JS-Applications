@@ -5,7 +5,7 @@ const endpoints = {
     login: '/users/login',
     register: '/users/register',
     logout: '/users/logout',
-}
+};
 
 export async function login(email, password) {
     const result = await api.post(endpoints.login, { email, password });

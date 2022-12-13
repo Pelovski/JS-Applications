@@ -1,18 +1,17 @@
 import page from '../node_modules/page/page.mjs';
 
-import { AddSession } from './Middlewares/session.js';
-import { addRender } from './Middlewares/render.js';
+import { AddSession } from './middlewares/session.js';
+import { addRender } from './middlewares/render.js';
 
-import { logout } from './Api/user.js';
+import { logout } from './api/user.js';
 
-import { homePage } from './Views/home.js';
-//import { catalogPage } from './views/catalog.js';
-import { loginPage } from './Views/login.js';
-import { registerPage } from './Views/register.js';
-import { createPage } from './Views/create.js';
-import { detailsPage } from './Views/details.js';
-import { editPage } from './Views/edit.js';
-import { productsPage } from './Views/products.js';
+import { homePage } from './views/home.js';
+import { loginPage } from './views/login.js';
+import { registerPage } from './views/register.js';
+import { createPage } from './views/create.js';
+import { detailsPage } from './views/details.js';
+import { editPage } from './views/edit.js';
+import { productsPage } from './views/products.js';
 
 
 page(AddSession);
@@ -25,7 +24,7 @@ page('/register', registerPage);
 page('/create', createPage);
 page('/details/:id', detailsPage);
 page('/edit/:id', editPage);
-page('/logout', onLogout)
+page('/logout', onLogout);
 
 
 page.start();

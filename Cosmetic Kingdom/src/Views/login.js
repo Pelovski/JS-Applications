@@ -1,7 +1,7 @@
 import { html } from '../../node_modules/lit-html/lit-html.js';
 import { createSubmitHandler } from '../api/utils.js';
 
-import * as userService from '../api/user.js'
+import * as userService from '../api/user.js';
 
 
 const loginTemplate = (onSubmit) => html`

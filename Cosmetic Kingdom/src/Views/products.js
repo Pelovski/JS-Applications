@@ -1,5 +1,5 @@
 import { html } from '../../node_modules/lit-html/lit-html.js';
-import * as cosmeticsService from '../Api/cosmetics.js'
+import * as cosmeticsService from '../api/cosmetics.js';
 
 const productsTemplate = (dashboardProducts) => html`
 <h2>Products</h2>
