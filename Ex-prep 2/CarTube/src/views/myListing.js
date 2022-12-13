@@ -7,7 +7,6 @@ const myListingTemplate = () => html`
     <h1>My car listings</h1>
     <div class="listings">
 
-        <!-- Display all records -->
         {${previewTemplate}}
 
         <!-- Display if there are no records -->

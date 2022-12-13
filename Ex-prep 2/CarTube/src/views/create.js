@@ -43,8 +43,6 @@ export function createPage(ctx) {
 }
 
 async function onSubmit(ctx, data, event){
-
-    console.log(data);
    if(Object.values(data).some(f => f =='')){
         return alert('All fields are required!');
     }
@@ -58,7 +56,7 @@ async function onSubmit(ctx, data, event){
         price: data.price
     });
 
-    console.log(data);
+
 
     event.target.reset();
     ctx.page.redirect('/carListing');
